@@ -1,0 +1,32 @@
+.card
+{
+    background-color:  #CFB8FFB2;
+    width: 283px;
+    height: 283px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 5px;
+    border-radius: 16px;
+}
+.img{
+      margin-left: 64px;
+      width: 144px;
+      height: 144px;
+      margin-top: 10px;
+}
+.heading
+{
+    font-size: 13px;
+    color: #073B4C;
+    line-height: 28px;
+    line-height: 101%;
+    letter-spacing: -2%;
+    margin-left: 25px;
+}
+.desc
+{
+    color: #073B4C;
+    font-size: 18px;
+    margin-left: -5px;
+}

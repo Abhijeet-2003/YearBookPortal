@@ -1,0 +1,592 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+img, button{
+    cursor: pointer;
+}
+
+.main_question {
+    background: #DBABFC;
+    margin-left: 4vw;
+    width: 26vw;
+    height: 19vh;
+    margin-top: 3.5vh;
+    border-radius: 3%;
+}
+
+.Logo_myself{
+    display: flex;
+    justify-content: center;
+}
+
+.hello {
+    height: 90%;
+    margin-top: -2%;
+    width: 25.5vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    background: rgb(252, 241, 241);
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(166, 133, 251);
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(166, 133, 350);
+}
+
+.q_num {
+    font-weight: 600;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    padding-top: 2vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.ans {
+    padding-left: 1vw;
+    color: #073B4C;
+    font-size: 16px;
+    padding-bottom: 2.5vh;
+    padding-right: 1vw;
+}
+
+.ans_logo {
+    /* position: fixed; */
+    height: 16px;
+    cursor: pointer;
+    margin-left: 22vw;
+    padding-bottom: 0px;
+}
+
+.main {
+    overflow: hidden;
+    background: rgba(255, 209, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4vh;
+    width: 26vw;
+    height: auto;
+    margin-left: 4vw;
+    border-radius: 1.5%;
+}
+
+.profile {
+    margin-top: 1vh;
+    width: 100%;
+    height: 36.5vh;
+    max-height: 300px;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.bioLogo {
+    position: absolute;
+    padding-top: 31vh;
+    padding-left: 11vw;
+    cursor: pointer;
+}
+
+.name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.info {
+    width: 318px;
+    ;
+    height: 44px;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #073B4C;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 0px;
+    gap: 20px;
+}
+
+.instagram,
+.linkdin {
+    cursor: pointer;
+}
+
+.bio {
+    width: 318px;
+    height: auto;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #073B4C;
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 2vh;
+}
+
+.MyProfileRight {
+    overflow: hidden;
+    /* background-color: aquamarine; */
+    height: 100%;
+    width: 100%;
+}
+
+.MyProfileR_a {
+    position: absolute;
+    width: 62%;
+    margin-right: 32px;
+    top: 90px;
+    left: 35%;
+}
+
+.MyProfile_Left {
+    position: absolute;
+    top: 95px;
+}
+
+
+
+.MyProfileR_Search {
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+}
+
+.MyProfileR_card_hr {
+    border: 1px solid white;
+}
+
+.ProfileR_Search_input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border-width: 0px;
+    padding-left: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.ProfileR_Search_input:focus-visible {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+}
+
+.ProfileR_Search_input_i {
+    height: 33px;
+    position: relative;
+    right: 30px;
+}
+
+.MyProfileR_un {
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+}
+
+.MyProfileR_t_h {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 125px;
+    padding-right: 125px;
+    cursor: pointer;
+}
+
+.MyProfileR_c {
+    height: 70vh;
+    margin-left: 18px;
+    margin-top: 20px;
+}
+
+.MyProfileR_c_a {
+    /* background-color: grey; */
+    overflow-y: scroll;
+    /* scrollbar-color: #A685FB white; */
+    scrollbar-width: 5px;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 12px;
+    border-radius: 12px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: #A685FB;
+}
+
+.MyProfileR_card {
+    display: flex;
+    height: auto;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.MyProfileR_card_image {
+    display: block;
+    width: 700px;
+}
+
+.MyProfileR_card_detail {
+    margin: 10px;
+}
+
+.MyProfileR_card_card_name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 28px;
+}
+
+.MyProfileR_card_card_banch {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 10px;
+}
+
+.MyProfileR_card_img {
+    height: 156px;
+    width: 156px;
+    border-radius: 100%;
+    margin-top: 20px;
+}
+
+.MyProfileR_card_card_testimony {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 20px;
+}
+
+body {
+    background: radial-gradient(103.91% 192.47% at 97.33% 0%,
+            #ffedb6 0%,
+            #cf93ff 70.31%,
+            #bfa8ff 100%);
+    height: 115vh;
+    
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.topnav{
+    display: none;
+}
+@media only screen and (max-width: 1000px) {
+    .MyProfileR_a {
+        position: relative;
+        left: 4vw;
+        top: 0;
+        width: 93%;
+    }
+    .MyProfileR_card_image, .MyProfileR_card_card_name, .MyProfileR_card_card_banch {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        text-align: center;
+    }
+    body{
+        height: auto;
+    }
+    .MyProfileR_card {
+        display: block;
+    }
+    .MyProfileR_c_a {
+        /* background-color: grey; */
+        overflow-y: scroll;
+        /* scrollbar-color: #A685FB white; */
+        scrollbar-width: 5px;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 30px;
+    }
+    
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        border-radius: 0;
+        background-color: none;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0;
+        background-color: none;
+    }
+    
+    .MyProfileR_c{
+        margin-left: 0;
+        height: auto;
+    }
+    .MyProfileR_card_hr {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .MyProfileR_c_a {
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-right: 0;
+        background: rgba(255, 209, 255, 0.3);
+        margin-bottom: 20px;
+        border-radius: 6px;
+    }
+    .MyProfile_Left {
+        position: relative;
+        top: 0;
+    }
+
+    .main {
+        width: 93%;
+    }
+
+    .main_question {
+        width: 93%;
+    }
+
+    .hello {
+        padding-left: 5px;
+        width: calc(100% - 10px);
+    }
+
+    body {
+        overflow-y: auto;
+    }
+    .MyProfileR_t_h{
+        display: none;
+    }
+    .topnav{
+        display: block;
+    }
+    .MyProfileR_Search {
+        margin-top: 20px;
+    }
+    .profile {
+        max-height: 200px;
+        max-width: 200px;
+    }
+    .bioLogo{
+        margin-left: 35vw;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+    }
+}
+
+/* Style the navigation menu */
+.topnav {
+    margin-top: 20px;
+    overflow: hidden;
+    /* background-color: #333; */
+    position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+    display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+    /* background: black; */
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.boxpp{
+    background: #A685FB;
+    position: fixed;
+    height: 80vh;
+    width: 30vw;
+    margin: auto;
+    margin-left: 35vw;
+    align-content: center;
+    text-align: center;
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    z-index: 2;
+    visibility:hidden;
+    border-radius: 12px
+}
+.navpp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8vw;
+}
+.headpp{
+    margin-top: 5vh;
+    font-size: 4vh;
+    font-weight: 600;
+    margin-left: 9vw;
+}
+.crosspp{
+    margin-bottom: 2vh;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 3vh;
+    opacity: 0.7;
+    background-color: #1D4ED8;
+    border-radius: 50%;
+    width: 2.3vw;
+    height: 5vh;
+}
+.crosspp:hover{
+    transform: scale(1.1);
+}
+.picpp{
+    margin-top: 2vh;
+}
+.picture{
+    display: flex;
+    margin-left: 3vw;
+    margin-top: 1vh;
+}
+.file{
+    height: 3.5vh;
+    width: 7vw;
+    border-radius: 3px;
+    border: none;
+    font-size: 2vh;
+}
+.file:hover{
+    background-color: rgb(216, 208, 208);
+}
+.picDetail{
+    font-size: 2vh;
+    margin-top: 0.4vh;
+    margin-left: 0.7vw;
+}
+.picHead, .nameHead, .mailHead, .phoneHead, .addressHead, .bioHead{
+    text-align: left;
+    margin-left: 3vw;
+    font-size: 2.5vh;
+    font-weight: 500;
+    margin-top: 2vh;
+}
+.picInput, .nameInput, .mailInput, .phoneInput, .addressInput, .bioInput{
+    margin-left: 3vw;
+    margin-right: 3vw;
+    width: 24vw;
+    height: 4vh;
+    margin-top: 0.5vh;
+    font-size: 2vh;
+    border-radius: 3px;
+    border: none;
+}
+.bioInput{
+    font-family: 'Inter';
+    font-style: normal;
+    height: 10vh;
+    border-width: 0ch;
+    resize: none;
+    cursor: text;
+}
+.submitpp{
+    background-color: #1D4ED8;
+    margin-top: 3vh;
+    height: 6vh;
+    width: 24vw;
+    text-align: center;
+    color: white;
+    border: none;
+    font-size: 2.2vh;
+}
+.submitpp:hover{
+    transform: scale(1.05);
+}
+.ans_change{
+    margin-left: 1vw;
+    margin-top: 2vh;
+    display: flex;
+    width: 90%;
+}
+.textarea_ans{
+    resize: none;
+    height: 8.2vh;
+    width: 98%;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2vh;
+    color: #808b9b;
+    background-color: white;
+    cursor: auto;
+}
+.textarea_ans:focus{
+    outline: none;
+}
+.ansSubmit_button{
+    background-color: white;
+    height: 8.2vh;
+    width: 12%;
+    justify-content: center;
+}
+.ans_submit{
+    height: 4.5vh;
+    width: 2vw;
+    margin-top: 1.8vh;
+}
+.ans_submit:hover{
+    transform: scale(1.1);
+}

@@ -5,7 +5,7 @@ import LandingPage from "./pages/Landing Page/LandingPage";
 import MyProfilePage from "./pages/MyProfileRight";
 import FriendsProfilePage from "./pages/FriendsProfile"
 import LeaderBoard from './pages/Leaderboard';
-
+import Testimonial from "./pages/Testimonial/Testimonials"
 function App() {
   return (
     <Router>
@@ -19,6 +19,9 @@ function App() {
           </Route>
           <Route exact path="/myprofile">
             <MyProfilePage />
+          </Route>
+          <Route exact path="/testimonial">
+            <Testimonial/>
           </Route>
           <Route exact path="/leaderboard">
             <LeaderBoard/>

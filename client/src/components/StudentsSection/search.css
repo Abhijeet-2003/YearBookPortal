@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+div.scroll {
+    background-color: #fed9ff;
+    width: 74vw;
+    height: 74vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
+    gap: 5px;
+    margin-top: 6%;
+   margin-bottom: 0%;
+    margin-left: 11%;
+    justify-content: center;
+     justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+  }
+  .search
+  {
+    height: 5vh;
+    width: 35vw;
+    position: relative;
+    left: 6%;
+    right: 60%;
+    top: 0.6em;
+    background-color: #F7F8F9;
+    border: none;
+  }
+  ::placeholder
+  {
+    padding-left: 10px;
+    font-size: 1.2vw;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 5px;
+  }
+  .bg_effect
+  {
+    width: 78vw;
+    height: 80vh;
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: rgba(255,255,255,0.3)
+  }
+  .head{
+    position: relative;
+    left: 32%;
+    right: 40%;
+    top: 1em;
+    font-size: 1.75vmax;
+  }
+  .container
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 1%;
+  }
+  .head-content
+  {
+  position: relative;
+  width: 500px;
+  font-size: 25px;
+  top: 5em;
+  left: 21em;
+  }
+  .box
+  {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .main-content
+  {
+    display: flex;
+    flex-direction: column;
+  }
