@@ -12,6 +12,7 @@ def sayhello(request):
 
 @api_view(['GET'])
 def announcements(request):
+    # [isAuthenticated]
     if request.method == 'GET':
         try:
             data = Announcement.objects.all()
