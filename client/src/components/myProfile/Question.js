@@ -1,11 +1,22 @@
 import userData from '../../database/profile.json'
 import ans_logo from '../../assets/myprofile/ans_logo.png'
 import ans_submit from '../../assets/myprofile/answer.png'
-import { useState} from 'react'
+import { useContext, useEffect, useState} from 'react'
+import { MIDContext } from '../../contexts/mId';
+import axios from 'axios';
 
 function Question(){
     const[ans, setans] = useState(-1);
     const[userAnswer, setuserAnswer] = useState('');
+    const { mID } = useContext(MIDContext);
+
+    useEffect(() => {
+        axios.get(`http://localhost:8000/api/profileans/${mID}`)
+        .then(data => {
+            // setuserAnswer(data);
+            console.log(data);
+        })
+    }, [mID, ans]);
 
     function submit_ans(){
         fetch('http://localhost:3000/myprofile', {

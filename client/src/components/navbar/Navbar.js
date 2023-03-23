@@ -7,11 +7,19 @@ import down from '../../assets/navbar/down.png'
 import {Link} from 'react-router-dom';
 import './Navbar.css';
 import { useState } from 'react';
+import { useMsal } from '@azure/msal-react';
 
 const Navbar = () => {
 
+    const { instance } = useMsal();
+
     const [openMenu, setOpenMenu] = useState(false);
     const [userClick, setUserClick] = useState(false);
+
+    const handleLogout = (e) => {
+        e.preventDefault();
+        instance.logoutRedirect();
+    }
 
     return ( 
         <div className="navbar">
@@ -20,7 +28,7 @@ const Navbar = () => {
                 <img src={yearbook} alt="YEARBOOK" class="nav-yearbook"/>
             </div>
             <div className="nav-links">
-                <Link to="/home">Home</Link>
+                <Link to="/">Home</Link>
                 <Link to="/testimonials">Testimonials</Link>
                 <Link to="/polls">Polls</Link>
                 <Link to="/leaderboard">Leaderboard</Link>
@@ -29,7 +37,7 @@ const Navbar = () => {
                 openMenu && 
                 <div className="nav-hamburg">
                     <ul>
-                        <li><Link to="/home">Home</Link></li>
+                        <li><Link to="/">Home</Link></li>
                         <li><Link to="/testimonials">Testimonials</Link></li>
                         <li><Link to="/polls">Polls</Link></li>
                         <li><Link to="/leaderboard">Leaderboard</Link></li>
@@ -68,7 +76,7 @@ const Navbar = () => {
                     <ul>
                         <li><Link to="/myprofile">My Profile</Link></li>
                         <li><Link to="#">Hidden Testimonials</Link></li>
-                        <li><Link to="/">Log Out</Link></li>
+                        <li><button onClick={handleLogout}>Log Out</button></li>
                     </ul>
                 </div>
                 

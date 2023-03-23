@@ -3,10 +3,24 @@ import  instagram from '../../assets/myprofile/Instagram.png';
 import  linkdin from '../../assets/myprofile/Linkdin.png';
 import  profile_icon from '../../assets/myprofile/profile_icon.png';
 import userData from '../../database/profile.json'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { MIDContext } from '../../contexts/mId';
 
 function Myself(){
     const[pop, setpop] = useState(0);
+    const { mID } = useContext(MIDContext);
+    const [profile, setProfile] = useState({});
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/api/profile/${mID}/`,{
+            method: "GET",
+        }).then(res => res.json())
+        .then(data => {
+            setProfile(data);
+            console.log(data);
+        })
+        .catch(error => console.log("the error is: ", error));
+    }, [mID]);
 
     useEffect(()=>{
         if(pop){
@@ -21,8 +35,8 @@ function Myself(){
                 <img className="profile" alt="profile" src={profile_photo} />
                 <img className="bioLogo" alt="bioLogo" src={profile_icon} onClick={()=> setpop(1) }/>
             </div>
-            <div className='name'>{userData.profile[0].name}</div>
-            <div className='info'>{userData.profile[0].branch}, {userData.profile[0].course}, {userData.profile[0].passout_year}</div>
+            <div className='name'>{profile['full_name']}</div>
+            <div className='info'>{profile['department']}, {profile['program']}, {profile['rollno']}</div>
             <div className='logos'>
                 <a href={userData.profile[0].insta_handle}>
                     <img className="linkdin" alt="linkdin" src={linkdin} />
@@ -32,7 +46,7 @@ function Myself(){
                 </a>
             </div>
             <div className='bio'>
-                {userData.profile[0].bio}
+                {profile['bio']}
             </div>
         </div>
     )

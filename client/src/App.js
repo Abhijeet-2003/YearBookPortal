@@ -5,33 +5,35 @@ import LandingPage from "./pages/Landing Page/LandingPage";
 import MyProfilePage from "./pages/MyProfileRight";
 import FriendsProfilePage from "./pages/FriendsProfile"
 import LeaderBoard from './pages/Leaderboard';
-import Testimonial from "./pages/Testimonial/Testimonials"
-function App() {
+import Testimonials from "./pages/Testimonial/Testimonials";
+import { useIsAuthenticated } from "@azure/msal-react";
+
+function App({ msalInstance }) {
+
+  const isAuthenticated = useIsAuthenticated();
+  
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route exact path="/">
-            <LandingPage />
-          </Route>
-          <Route exact path="/home">
-            <Homepage />
-          </Route>
-          <Route exact path="/myprofile">
-            <MyProfilePage />
-          </Route>
-          <Route exact path="/testimonial">
-            <Testimonial/>
-          </Route>
-          <Route exact path="/leaderboard">
-            <LeaderBoard/>
-          </Route>
-          <Route exact path="/friendprofile">
-            <FriendsProfilePage/>
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route exact path="/">
+              {isAuthenticated ? <Homepage /> : <LandingPage />}
+            </Route>
+            <Route exact path="/myprofile">
+              {isAuthenticated ? <MyProfilePage /> : <LandingPage />}
+            </Route>
+            <Route exact path="/testimonials">
+              {isAuthenticated ? <Testimonials/> : <LandingPage />}
+            </Route>
+            <Route exact path="/leaderboard">
+              {isAuthenticated ? <LeaderBoard/> : <LandingPage />}
+            </Route>
+            <Route exact path="/friendprofile">
+              {isAuthenticated ? <FriendsProfilePage/> : <LandingPage />}
+            </Route>
+          </Switch>
+        </div>
+      </Router>
   );
 }
 
